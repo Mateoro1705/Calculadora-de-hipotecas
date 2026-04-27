@@ -3,68 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="/layout/Style.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="layout/style.css" />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <!--Fuente de google-->
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <title>Mortgage repayment calculator</title>
   </head>
+
   <body>
-    <section class="simulador">
-      <form action="" class="dataForm">
-        <div class="titulos">
-          <h2>Mortgage Calculator</h2>
-          <h6>Clear All</h6>
-        </div>
+    <main>
+      <section class="mortgageCalculator">
+        <form class="calculatorForm">
+          <!-- Header -->
+          <div class="formHeader">
+            <h2 class="formTitle">Mortgage Calculator</h2>
+            <button type="reset" class="clearButton">Clear All</button>
+          </div>
 
-        <!-- Empty results start -->
-        <h4>Mortgage Amount</h4>
-        <input type="number" />
+          <!-- Datos principales -->
+          <fieldset class="formSection">
+            <legend class="sectionTitle">Mortgage Details</legend>
 
-        <h4>Mortgage Term</h4>
-        <input type="number" />
+            <!-- Amount -->
+            <div class="inputGroup">
+              <label for="amount" class="inputLabel">Mortgage Amount</label>
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                class="textInput"
+                placeholder="e.g. 250000"
+                required
+              />
+            </div>
 
-        <h4>Interest Rate</h4>
-        <input type="number" />
+            <!-- Term + Interest -->
+            <div class="rateInputs">
+              <div class="inputGroup">
+                <label for="term" class="inputLabel">
+                  Mortgage Term (years)
+                </label>
+                <input
+                  type="number"
+                  id="term"
+                  name="term"
+                  class="textInput"
+                  placeholder="e.g. 25"
+                  required
+                />
+              </div>
 
-        <h4>Mortgage Type</h4>
-        <label
-          ><input type="checkbox" id="cbox1" value="first_checkbox" />
-          Repayment</label
-        ><br />
+              <div class="inputGroup">
+                <label for="rate" class="inputLabel"> Interest Rate (%) </label>
+                <input
+                  type="number"
+                  id="rate"
+                  name="rate"
+                  class="textInput"
+                  step="0.01"
+                  placeholder="e.g. 5.25"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
 
-        <label
-          ><input type="checkbox" id="cbox1" value="first_checkbox" /> Interest
-          Only</label
-        ><br />
+          <!-- Tipo de hipoteca -->
+          <fieldset class="formSection">
+            <legend class="sectionTitle">Mortgage Type</legend>
 
-        <button>Calculate Repayments</button>
-      </form>
+            <div class="radioGroup">
+              <label class="radioOption">
+                <input
+                  type="radio"
+                  name="mortgageType"
+                  value="repayment"
+                  required
+                />
+                Repayment
+              </label>
 
-      <aside class="info_credit">
-        <img src="assets/images/illustration-empty.svg" alt="" />
-        <h4>Results shown here</h4>
-        <p>
-          Complete the form and click “calculate repayments” to <br />
-          see what your monthly repayments would be.}
-        </p>
-      </aside>
-    </section>
-    <footer class="attribution">
+              <label class="radioOption">
+                <input type="radio" name="mortgageType" value="interestOnly" />
+                Interest Only
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Botón -->
+          <button type="submit" class="calculateButton">
+            Calculate Repayments
+          </button>
+        </form>
+
+        <!-- Resultados -->
+        <aside class="resultsPanel">
+          <img
+            src="assets/images/illustration-empty.svg"
+            alt="Illustration showing no results"
+            class="resultsImage"
+          />
+          <h4 class="resultsTitle">Results shown here</h4>
+          <p class="resultsText">
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="attributionFooter">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      <a href="https://www.frontendmentor.io?ref=challenge"> Frontend Mentor </a
+      >. Coded by <a href="#">Your Name Here</a>.
     </footer>
   </body>
 </html>

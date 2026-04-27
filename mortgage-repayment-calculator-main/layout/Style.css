@@ -1,0 +1,72 @@
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: hsl(202, 86%, 94%);
+}
+
+
+.mortgageCalculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculatorForm {
+    padding: 30px;
+}
+
+.formHeader {
+    display: flex;
+    gap: 80px;
+}
+
+.formHeader button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield
+}
+
+/*Esta es la parte donde se muetsran los resultados*/
+.resultsPanel {
+    background-color: hsl(202, 55%, 16%);
+    display: flex;
+    width: 500px;
+    height: 500px;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 0px 10px 10px 70px;
+    -moz-border-radius: 0px 10px 10px 70px;
+    -webkit-border-radius: 0px 10px 10px 70px;
+    border: 0px solid #000000;
+}
+
+.resultsPanel h4 {
+    color: hsl(0, 0%, 100%);
+}
+
+.resultsPanel p {
+    color: hsl(200, 26%, 54%);
+}
