@@ -1,27 +1,37 @@
+html,
 body {
-    width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+body {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: hsl(202, 86%, 94%);
+    background-color: hsl(203, 41%, 72%);
 }
 
 
 .mortgageCalculator {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .calculatorForm {
-    padding: 30px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 35px;
 }
 
 .formHeader {
     display: flex;
-    gap: 80px;
+    margin-bottom: 20px;
+    gap: 85px;
 }
 
 .formHeader button {
@@ -36,21 +46,85 @@ button:hover {
 }
 
 
+/*Parte del formulario inicial*/
+.formSection {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 10px 0;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    padding: 5px 0;
+    gap: 10px;
+}
+
+.textInput {
+    width: 330px;
+    height: 30px;
+    border-radius: 5px;
+    border: hsl(200, 26%, 54%) solid 1px;
+}
+
+.rateInputs {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.rateInputs .textInput {
+    width: 155px;
+    padding: 0;
+}
+
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type=number] {
-    -moz-appearance: textfield
+
+
+/*Esta es la parte donde se selecciona el tipo de hipoteca*/
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 10px;
 }
+
+.radioOption {
+    width: 335px;
+    border: hsl(200, 26%, 54%) solid 1px;
+    border-radius: 5px;
+    padding: 8px 0;
+}
+
+.radioOption:hover {
+    cursor: pointer;
+}
+
+/*Esta es la parte del boton para calcular*/
+.calculateButton {
+    background-color: hsl(61, 70%, 52%);
+    width: 230px;
+    margin-top: 15px;
+    border-radius: 50px;
+    border: none;
+    padding: 15px;
+}
+
+
 
 /*Esta es la parte donde se muetsran los resultados*/
 .resultsPanel {
     background-color: hsl(202, 55%, 16%);
     display: flex;
-    width: 500px;
+    width: 420px;
     height: 500px;
     padding: 15px;
     flex-direction: column;
@@ -69,4 +143,11 @@ input[type=number] {
 
 .resultsPanel p {
     color: hsl(200, 26%, 54%);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: end;
 }

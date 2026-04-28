@@ -38,9 +38,6 @@
 
           <!-- Datos principales -->
           <fieldset class="formSection">
-            <legend class="sectionTitle">Mortgage Details</legend>
-
-            <!-- Amount -->
             <div class="inputGroup">
               <label for="amount" class="inputLabel">Mortgage Amount</label>
               <input
@@ -48,7 +45,6 @@
                 id="amount"
                 name="amount"
                 class="textInput"
-                placeholder="e.g. 250000"
                 required
               />
             </div>
@@ -56,28 +52,24 @@
             <!-- Term + Interest -->
             <div class="rateInputs">
               <div class="inputGroup">
-                <label for="term" class="inputLabel">
-                  Mortgage Term (years)
-                </label>
+                <label for="term" class="inputLabel"> Mortgage Term </label>
                 <input
                   type="number"
                   id="term"
                   name="term"
                   class="textInput"
-                  placeholder="e.g. 25"
                   required
                 />
               </div>
 
               <div class="inputGroup">
-                <label for="rate" class="inputLabel"> Interest Rate (%) </label>
+                <label for="rate" class="inputLabel"> Interest Rate </label>
                 <input
                   type="number"
                   id="rate"
                   name="rate"
                   class="textInput"
                   step="0.01"
-                  placeholder="e.g. 5.25"
                   required
                 />
               </div>
@@ -108,7 +100,7 @@
 
           <!-- Botón -->
           <button type="submit" class="calculateButton">
-            Calculate Repayments
+            📠 Calculate Repayments
           </button>
         </form>
 
